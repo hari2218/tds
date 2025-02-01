@@ -1,0 +1,20 @@
+name: My Custom GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Run a Step with My Email (hariharan.chandran@straive.com)
+        run: echo "This step is executed in the workflow"
+
+      - name: Verify Most Recent Action
+        run: echo "Check GitHub Actions for the latest run!"
